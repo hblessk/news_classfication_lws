@@ -27,12 +27,16 @@ for i in range(6):
     print(title_tags[0].text) # 제목만 뽑고 싶으면 [0].text를 쓰면 된다.
     titles = []
     for title_tag in title_tags:
-        titles.append(title_tag.text)
+        title = title_tag.text
+        titles.append(title)
+         # comile은 빼라 # ^이 없으면 그것만 빠진다. ^가-힣0-9
+        title = re.compile('[^가-힣 ]').sub(' ', title) # ^은 뒤에 있는 것 말고 싹 다
+         # 띄어쓰기 빼고 다 빼라
     df_section_titles = pd.DataFrame(titles, columns=['titles'])
     df_section_titles['category'] = category[i] # 다 돌고나면 df_titles에 모든 카테고리가 들어간다.
     df_titles = pd.concat([df_titles, df_section_titles], axis='rows', ignore_index=True)
 print(df_titles)
 print(df_titles.category.value_counts())
-df_titles.to_csv('./crawlind_data/naver_headline_news_{}.csv'.format(
+df_titles.to_csv('./crawling_data/naver_headline_news_{}.csv'.format(
     datetime.datetime.now().strftime('%Y%m%d')), index=False) # 마지막에 날짜 넣은 함수
 # index 안보이게 하기 위해서 index=False를 주었다.
