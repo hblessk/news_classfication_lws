@@ -5,5 +5,5 @@
 
 파이썬 실행버전 : 3.7
 
-폴더 구조
+폴더 구조 : 
 project_root --- crawling_data
