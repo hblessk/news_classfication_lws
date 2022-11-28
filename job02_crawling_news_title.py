@@ -42,3 +42,7 @@ for i in range(0, 6): # section
             df_title = pd.concat([df_title, df_section_title], ignore_index=True)
             df_title.to_csv('./crawling_data/crawling_data_{}_{}.csv'.format(category[i], j), index=False)
             titles = []
+
+
+#//*[@id="appMountPoint"]/div/div/div[1]/div[2]/div/div[3]/div/div[1]/div/div/div[1]/p/div
+#//*[@id="appMountPoint"]/div/div/div[1]/div[2]/div/div[3]/div/div[1]/div/div/div[1]/p/div
