@@ -14,7 +14,7 @@ driver.maximize_window() # 전체장
 time.sleep(1) # 2초 지연
 
 
-place = ['신림동길 14', '역삼로7길 16'] #
+place = ['신림동길 14', '역삼로7길 16', '화곡로 168'] #
 category = ['1인분 주문', '프랜차이즈', '치킨', '피자/양식', '중국집', '한식', '일식/돈까스',
             '족발/보쌈', '야식', '분식', '카페/디저트']
 
@@ -81,7 +81,7 @@ for i in place:
         df_restaurant = pd.concat([df_restaurant, df_section_titles], axis='rows', ignore_index=True)
 
         # csv 파일형태로 저장
-        df_restaurant.to_csv('./island_team_models/crawling_data.csv', index=False)
+        df_restaurant.to_csv('./crawling_data.csv', index=False)
 
     time.sleep(1)
 
