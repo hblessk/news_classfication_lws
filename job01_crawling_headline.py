@@ -40,3 +40,5 @@ print(df_titles.category.value_counts())
 df_titles.to_csv('./crawling_data/naver_headline_news_{}.csv'.format(
     datetime.datetime.now().strftime('%Y%m%d')), index=False) # 마지막에 날짜 넣은 함수
 # index 안보이게 하기 위해서 index=False를 주었다.
+
+
